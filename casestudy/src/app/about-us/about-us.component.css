@@ -1,0 +1,10 @@
+body img{
+    height: 350px;
+    width: 350px;
+}
+body h1{
+    text-align: center;
+    color: slategray;
+}p{
+    font-family:'Times New Roman', Times, serif
+}

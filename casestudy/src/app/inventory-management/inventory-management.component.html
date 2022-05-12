@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="card mt-5" style="align-items: center;">
+        <h1 style="text-align: center;"> Welcome To Online Hotel Management System</h1>
+    </div>
+    <div>
+        <form #regirsterForm ="ngForm" (ngSubmit)="inventoryManage(regirsterForm)">
+            <div class="form-group">
+                <label for="inventoryId"> inventoryId :</label> 
+                <input type="number" #inventoryId [(ngModel)]="inventory.inventoryId" name="inventoryId"  class="form-control" placeholder="inventoryId">
+
+                <label for="inventoryName"> inventoryName :</label> 
+                <input type="text" #inventoryName [(ngModel)]="inventory.inventoryName" name="inventoryName"  class="form-control" placeholder="inventoryName">
+
+                
+                <label for="inventoryType"> inventoryType :</label> 
+                <input type="text" #inventoryType [(ngModel)]="inventory.inventoryType" name="inventoryType"  class="form-control" placeholder="inventoryType">
+
+                <label for="inventoryPrice"> inventoryPrice :</label> 
+                <input type="number" #inventoryPrice [(ngModel)]="inventory.inventoryPrice" name="inventoryPrice"  class="form-control" placeholder="inventoryPrice">
+
+            </div>
+                <div class="form-group mt-3" >
+                    <input type="submit"  value="AddInventory" class="btn btn-primary w-100">
+                 </div>
+        </form>
+    </div>
+    <div class="mt-5">
+        <table class="table table-bordered">
+            <thead class="thead">
+                <tr>
+                    <th>inventoryId</th>
+                    <th>inventoryName</th>
+                    <th>inventoryType</th>
+                    <th>inventoryPrice</th>
+                </tr>
+                </thead>
+                <tbody class="tbody">
+                    <!-- <tr *ngFor="let inventory of inventoryDetails"> -->
+                        <td> {{inventory.inventoryId}}</td>
+                        <td> {{inventory.inventoryName}}</td>
+                        <td> {{inventory.inventoryType}}</td>
+                        <td> {{inventory.inventoryPrice}}</td>
+
+
+
+
+                    <!-- </tr> -->
+
+                </tbody>
+            
+        </table>
+    </div>
+</div>
+
+
+
+

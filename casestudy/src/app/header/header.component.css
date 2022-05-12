@@ -1,0 +1,32 @@
+nav{
+    background-color:lightskyblue;
+    padding: 10px;
+}
+nav img{
+    width: 60px;
+}
+nav ul{
+    float: right;
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    padding: 10px;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 20px;
+}
+nav ul li a:hover{
+    background: #484d52;
+}
+nav ul ul{
+    position: absolute;
+} 
+nav ul a{
+    padding: 10px;
+}
+
+

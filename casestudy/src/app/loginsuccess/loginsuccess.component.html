@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="card mt-5" style="align-items: center;">
+        <h1 style="text-align: center;"> Welcome To Online Hotel Management System</h1>
+    </div>
+
+    <div>
+        <form #regirsterForm ="ngForm" (ngSubmit)="reserveRoom(regirsterForm)" name="form" [formGroup]="form">
+            <div class="form-group">
+                <label for="code"> RoomCode :</label> 
+                <input type="number" #code [(ngModel)]="reservation.code" name="code"  class="form-control" placeholder="Room Code" formControlName="code" [ngClass]="{'is-invalid':form.get('code')?.touched && form.get('code')?.invalid}">
+                <div class="invalid-feedback">
+                    <div>Room Code Is Required</div>
+                </div>
+            </div>
+            <div class="form-group"></div>
+                <label for="numberofChildren"> RoomCode :</label> 
+                <input type="number" #numberofChildren [(ngModel)]="reservation.numberofChildren" name="numberofChildren"  class="form-control" placeholder="numberofChildren">
+               
+                <div class="form-group">
+                <label for="numberofAdults"> enumberofAdults:</label> 
+                <input type="number" #numberofAdults [(ngModel)]="reservation.numberofAdults" name="numberofAdults"  class="form-control" placeholder="numberofChildren">
+             
+                <div class="form-group">
+                <label for="checkinDate"> checkinDate:</label> 
+                <input type="date" #checkinDate [(ngModel)]="reservation.checkinDate" name="checkinDate"  class="form-control" placeholder="checkinDate">
+            </div>
+
+                <div class="form-group">
+                <label for="checkoutDate"> checkoutDate:</label> 
+                <input type="date" #checkoutDate [(ngModel)]="reservation.checkoutDate" name="checkoutDate"  class="form-control" placeholder="checkoutDate">
+            </div>
+
+                <div class="form-group">
+                <label for="status"> status:</label> 
+                <input type="text" #status [(ngModel)]="reservation.status" name="status"  class="form-control" placeholder="status">
+            </div>
+                <div class="form-group">
+                <label for="numberofNights"> numberofNights:</label> 
+                <input type="number" #numberofNights [(ngModel)]="reservation.numberofNights" name="numberofNights"  class="form-control" placeholder="numberofNights">
+            </div>
+            
+
+        
+        <!-- <div class="form-group mt-3" >
+            <input type="submit"  [routerLink]="['/payment']"  value="MakePayment" class="btn btn-primary w-100">
+         </div> -->
+
+         <div class="form-group mt-3">
+            <button class="btn btn-primary w-100" (click)="pay()">Pay</button>
+         </div>
+
+            <div class="form-group mt-3" >
+                <input type="submit"  value="ReserveRoom" class="btn btn-primary w-100">
+             </div>
+                </div>
+        </form>
+    </div>
+    

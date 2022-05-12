@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="card mt-5" style="align-items: center;">
+        <h1 style="text-align: center;"> Welcome To Online Hotel Management System</h1>
+    </div>
+
+    <div>
+        <form #regirsterForm ="ngForm" (ngSubmit)="doPayment(regirsterForm)">
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="billingNumber"> BillingNumber</label> 
+                    <input type="number" #billingNumber [(ngModel)]="payment.billingNumber" name="billingNumber"  class="form-control" placeholder="billingNumber">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="price"> Price</label> 
+                    <input type="number" #price [(ngModel)]="payment.price" name="price"  class="form-control" placeholder="price">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="cardNumber"> CardNumber</label> 
+                    <input type="number" #cardNumber [(ngModel)]="payment.cardNumber" name="cardNumber"  class="form-control" placeholder="cardNumber">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="cvv"> CVV</label> 
+                    <input type="number" #cvv [(ngModel)]="payment.cvv" name="cvv"  class="form-control" placeholder="cvv">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="taxes"> Taxes</label> 
+                    <input type="number" #taxes [(ngModel)]="payment.taxes" name="taxes"  class="form-control" placeholder="taxes">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="quantity"> Quantity</label> 
+                    <input type="string" #quantity [(ngModel)]="payment.quantity" name="taxes"  class="form-control" placeholder="quantity">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="date"> Date</label> 
+                    <input type="date" #quantity [(ngModel)]="payment.date" name="date"  class="form-control" placeholder="date">
+                 </div>
+
+                 <div class="form-group">
+                    <label for="totalBill"> Total Bill</label> 
+                    <input type="number" #totalBill [(ngModel)]="payment.totalBill" name="totalBill"  class="form-control" placeholder="totalBill">
+                 </div>
+
+                 </div>
+                 <div class="form-group mt-3" >
+                    <input type="submit"  value="MakePayment" class="btn btn-primary w-100">
+                 </div>
+        </form>
+    </div>
+    
+                 
+
+
+                 
+
+
+

@@ -1,0 +1,17 @@
+<div class="container col-md-7">
+  <form (ngSubmit)="managerLogin()">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">UserID</label>
+      <input type="email" [(ngModel)]="manager.userId" class="form-control" name="userId" placeholder="Enter MailId">
+    </div>
+    
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"> Password</label>
+      <input type="password"[(ngModel)]="manager.password" class="form-control" name="password" placeholder="Enter Password">
+    </div>
+    <button type="submit"   class="btn btn-primary"> Login</button>
+
+  </form>
+  </div>
+
+
